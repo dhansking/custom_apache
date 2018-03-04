@@ -1,3 +1,4 @@
+
 property :homepage, String
 
 default_action :create
@@ -24,6 +25,6 @@ action :create do
 
   # Set the contents of the homepage.
   file '/var/www/html/index.html' do
-    content homepage
+    content new_resource.homepage
   end
 end
